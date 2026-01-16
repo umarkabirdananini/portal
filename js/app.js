@@ -1,28 +1,47 @@
+// ===== Selection Slip App (Bootstrap + Vanilla JS) =====
+// Data source: ./data/masterlist.json
+// Tracking: Google Apps Script Web App URL (MUST be HTTPS)
+
 let MASTER = [];
 let currentRecord = null;
 
 const TRACK_WEBHOOK_URL =
-  "https://script.google.com/macros/s/AKfycbxw9EPpVUYW1U6WBtVk6MCU5lEgxxwYXbmpOE_COABVqmQGBaUEERCkhuzjQ9e2WhfHCA/exec";
+  "https://script.google.com/macros/s/AKfycbwMKQajX5j3s3iS5SJvcIkI7TCa_SQWDUcVs9eYQiwvCvm3JpI42ijke5gyCL7wNS_tvQ/exec";
 
 const $ = (sel) => document.querySelector(sel);
 
 async function loadData() {
-  const res = await fetch("./data/masterlist.json", { cache: "no-store" });
-  MASTER = await res.json();
+  try {
+    const res = await fetch("./data/masterlist.json", { cache: "no-store" });
+    if (!res.ok) throw new Error("masterlist.json not found or blocked");
+    MASTER = await res.json();
+    console.log("✅ Masterlist loaded:", MASTER.length, "records");
+  } catch (err) {
+    console.error("❌ Data load error:", err);
+    showStatus(
+      "danger",
+      `Data file could not be loaded. Please confirm <b>data/masterlist.json</b> exists and is committed to GitHub Pages.`
+    );
+  }
 }
 
 function normalizeRef(v) {
-  return String(v || "").trim().toUpperCase().replace(/\s+/g, "");
+  return String(v || "")
+    .trim()
+    .toUpperCase()
+    .replace(/\s+/g, "");
 }
 
 function findRecordByRef(ref) {
   const target = normalizeRef(ref);
+  if (!target) return null;
   return MASTER.find((r) => normalizeRef(r.reference) === target) || null;
 }
 
 function showStatus(kind, html) {
-  $("#resultArea").classList.remove("d-none");
+  const area = $("#resultArea");
   const card = $("#statusCard");
+  area.classList.remove("d-none");
   card.className = `alert alert-${kind} mb-0`;
   card.innerHTML = html;
 }
@@ -89,6 +108,9 @@ function buildSlipHTML(r) {
              onerror="this.src='https://via.placeholder.com/240x280.png?text=Passport'">
         <div>
           <div class="h4 fw-bold mb-1">${escapeHtml(r.name)}</div>
+          <div class="text-secondary mb-3">
+            Congratulations! You have been selected and offered an appointment, subject to verification of your credentials.
+          </div>
 
           <div class="meta-grid">
             <div class="meta">
@@ -114,7 +136,7 @@ function buildSlipHTML(r) {
       <div class="mt-4 notice-box">
         <div class="fw-bold mb-1">📄 Next Steps</div>
         <div class="text-secondary">
-          The printed slip should be presented at the <span class="fw-semibold">Office of the State Head of Service</span>,
+          The printed slip should be presented at the Office of the State Head of Service,
           <span class="fw-semibold">Usman Faruku Secretariat</span> 🏢, together with:
           <span class="fw-semibold">Original credentials</span>.
         </div>
@@ -128,39 +150,57 @@ function buildSlipHTML(r) {
           <div class="text-secondary">State Recruitment Committee</div>
         </div>
       </div>
+
+      <div class="mt-4 pt-3 border-top small text-secondary">
+        © ${new Date().getFullYear()} Sokoto State Government — Recruitment Selection Portal
+      </div>
     </div>
   `;
 }
 
-// ✅ super reliable tracking (GET ping)
+// ===== Tracking (Reliable on GitHub Pages) =====
+// Uses GET "image ping" => no CORS, no preflight
 function trackPrint(record) {
-  if (!TRACK_WEBHOOK_URL) return;
+  try {
+    if (!TRACK_WEBHOOK_URL) return;
 
-  const params = new URLSearchParams({
-    action: "print",
-    reference: normalizeRef(record.reference),
-    name: record.name || "",
-    serial: record.serial || "",
-    page: location.href,
-    t: Date.now().toString(), // cache buster
-  });
+    // Force HTTPS (prevents Mixed Content)
+    const url = TRACK_WEBHOOK_URL.replace(/^http:\/\//i, "https://");
 
-  const img = new Image();
-  img.onload = () => console.log("✅ TRACK OK");
-  img.onerror = () => console.log("❌ TRACK FAIL");
-  img.src = `${TRACK_WEBHOOK_URL}?${params.toString()}`;
+    // Only attempt if it is a Google script https URL
+    if (!/^https:\/\/script\.google\.com\//i.test(url)) {
+      console.warn("⚠️ Tracking URL does not look like a Google Apps Script HTTPS URL.");
+      return;
+    }
+
+    const params = new URLSearchParams({
+      action: "print",
+      reference: normalizeRef(record.reference),
+      name: record.name || "",
+      serial: String(record.serial || ""),
+      page: location.href,
+      t: Date.now().toString(), // cache-buster
+    });
+
+    const img = new Image();
+    img.onload = () => console.log("✅ TRACK OK");
+    img.onerror = () => console.log("❌ TRACK FAIL");
+    img.src = `${url}?${params.toString()}`;
+  } catch (e) {
+    console.log("❌ TRACK ERROR", e);
+  }
 }
 
 function printSlip() {
   if (!currentRecord) return;
 
-  console.log("🖨️ PRINT BUTTON CLICKED", currentRecord.reference);
+  console.log("🖨️ PRINT CLICKED:", currentRecord.reference);
 
-  // track first, then print
+  // Track first, then print
   trackPrint(currentRecord);
 
-  // tiny delay so request starts before print dialog
-  setTimeout(() => window.print(), 300);
+  // small delay so request starts before print dialog
+  setTimeout(() => window.print(), 250);
 }
 
 function wireUI() {
@@ -170,9 +210,53 @@ function wireUI() {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const r = findRecordByRef(input.value);
+    const refVal = input.value.trim();
+    if (!refVal) return;
+
+    const r = findRecordByRef(refVal);
     currentRecord = r;
 
     if (!r) {
       showStatus(
-        "dan
+        "danger",
+        `<div class="fw-bold">Record not found</div>
+         <div class="small">Your reference number was not found in the current master list. Please confirm and try again.</div>`
+      );
+      togglePrint(false);
+      return;
+    }
+
+    showStatus(
+      "success",
+      `<div class="fw-bold">Selected ✅</div>
+       <div class="small">Your record was found. Click <b>Print Slip</b> to proceed.</div>`
+    );
+
+    togglePrint(true);
+
+    // Toast (if present)
+    const toastEl = $("#successToast");
+    if (toastEl && window.bootstrap?.Toast) {
+      bootstrap.Toast.getOrCreateInstance(toastEl, { delay: 3500 }).show();
+    }
+
+    // Build slip preview
+    $("#slip").innerHTML = buildSlipHTML(r);
+  });
+
+  // ✅ Event delegation = button always works even if DOM changes
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest("#printBtn");
+    if (btn) {
+      e.preventDefault();
+      printSlip();
+    }
+  });
+
+  console.log("✅ App wired: print listener active");
+}
+
+window.addEventListener("DOMContentLoaded", async () => {
+  await loadData();
+  wireUI();
+});
