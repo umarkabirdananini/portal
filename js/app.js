@@ -220,7 +220,7 @@ function wireUI() {
       showStatus(
         "danger",
         `<div class="fw-bold">Record not found</div>
-         <div class="small">Your reference number was not found in the current master list. Please confirm and try again.</div>`
+         <div class="small">Sorry the reference number you inserted is either wrong, or not selected.</div>`
       );
       togglePrint(false);
       return;
