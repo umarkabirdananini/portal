@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sokoto State Recruitment — Selection Slip Verification</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
+</head>
+<body class="app-bg">
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm glass-nav">
+    <div class="container py-2">
+      <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+        <img class="brand-logo" alt="Sokoto State Government Logo"
+             src="https://sokotostate.gov.ng/wp-content/uploads/2024/06/Sokoto-State-Government-600-x-200-px-1.png">
+        <div class="lh-sm">
+          <div class="fw-semibold">Sokoto State Government</div>
+          <small class="opacity-75">Recruitment Selection Slip Portal</small>
+        </div>
+      </a>
+      <span class="badge rounded-pill text-bg-light text-dark border">Verification • Printing • PDF</span>
+    </div>
+  </nav>
+
+  <main class="container my-4 my-lg-5">
+    <div class="row g-4 align-items-stretch">
+      <div class="col-12 col-lg-7">
+        <div class="card shadow-lg border-0 h-100">
+          <div class="card-body p-4 p-lg-5">
+            <div class="d-flex align-items-start justify-content-between gap-3 flex-wrap">
+              <div>
+                <h1 class="display-6 mb-2 fw-bold">Check Your Selection Status</h1>
+                <p class="text-secondary mb-0">
+                  Enter your <span class="fw-semibold">Reference Number</span> to confirm selection and generate your official notification slip.
+                </p>
+              </div>
+              <div class="text-end">
+                <div class="small text-secondary">Powered by</div>
+                <div class="fw-semibold">State Recruitment Committee</div>
+              </div>
+            </div>
+
+            <hr class="my-4">
+
+            <form id="searchForm" class="needs-validation" novalidate>
+              <label for="refInput" class="form-label fw-semibold">Reference Number</label>
+              <div class="input-group input-group-lg">
+                <span class="input-group-text">🔎</span>
+                <input id="refInput" class="form-control" placeholder="e.g., SKO-2025-64475" required>
+                <button class="btn btn-primary px-4" type="submit">
+                  Verify
+                </button>
+              </div>
+              <div class="invalid-feedback">
+                Please enter your reference number.
+              </div>
+              <div class="form-text mt-2">
+                Tip: You can paste your reference number exactly as it appears on your application/CBT slip.
+              </div>
+            </form>
+
+            <div id="resultArea" class="mt-4 d-none">
+              <div id="statusCard" class="alert mb-0" role="alert"></div>
+            </div>
+
+            <div class="mt-4 d-flex flex-wrap gap-2">
+              <button id="openSlipBtn" class="btn btn-success d-none" type="button" data-bs-toggle="modal" data-bs-target="#slipModal">
+                📄 View / Print Slip
+              </button>
+              <button id="downloadBtn" class="btn btn-outline-dark d-none" type="button">
+                ⬇️ Download PDF
+              </button>
+              <button id="printBtn" class="btn btn-outline-primary d-none" type="button">
+                🖨️ Print
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-5">
+        <div class="card shadow-lg border-0 h-100 info-card">
+          <div class="card-body p-4 p-lg-5">
+            <h2 class="h4 fw-bold mb-3">What happens after verification?</h2>
+
+            <div class="d-grid gap-3">
+              <div class="p-3 rounded-4 border bg-white">
+                <div class="fw-semibold">1) Generate your slip</div>
+                <div class="text-secondary small">Print or download it as a PDF from this portal.</div>
+              </div>
+              <div class="p-3 rounded-4 border bg-white">
+                <div class="fw-semibold">2) Present at the Office of the State Head of Service</div>
+                <div class="text-secondary small">
+                  <span class="fw-semibold">Usman Faruku Secretariat</span> 🏢
+                </div>
+              </div>
+              <div class="p-3 rounded-4 border bg-white">
+                <div class="fw-semibold">3) Come with these documents</div>
+                <ul class="small text-secondary mb-0">
+                  <li>Original credentials</li>
+                  <li>Portal receipt 🧾</li>
+                </ul>
+              </div>
+              <div class="p-3 rounded-4 border bg-white">
+                <div class="fw-semibold">Purpose</div>
+                <div class="text-secondary small">
+                  Evidence of notification and invitation for appointment letter collection 📬.
+                </div>
+              </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="small text-secondary">
+              If you have trouble verifying your reference number, please ensure there are no extra spaces, and try again.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Slip Modal -->
+  <div class="modal fade" id="slipModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="modal-header">
+          <div>
+            <div class="fw-bold">Selection Notification Slip</div>
+            <div class="small text-secondary">Print or download as PDF</div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-light">
+          <div class="d-flex justify-content-center">
+            <div id="slip" class="slip-paper shadow-sm">
+              <!-- Filled by JS -->
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-dark" id="modalDownloadBtn" type="button">⬇️ Download PDF</button>
+          <button class="btn btn-primary" id="modalPrintBtn" type="button">🖨️ Print</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="successToast" class="toast text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          🎉 Congratulations! Your record was found — you can generate your official slip now.
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- html2canvas + jsPDF for PDF export -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>
