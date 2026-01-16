@@ -225,9 +225,7 @@
 
   /* Slight scale down to guarantee single page */
   #slip{
-    transform: scale(0.90) !important;
-    transform-origin: top center !important;
-  }
+}
 
   /* Prevent breaks inside key blocks */
   .slip-paper, .slip-header, .slip-body, .person-row, .notice-box{
@@ -235,3 +233,5 @@
     break-inside: avoid !important;
   }
 }
+
+@media print{ .slip-paper::before{ display:none !important; } }
