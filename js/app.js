@@ -6,8 +6,19 @@ let MASTER = [];
 let currentRecord = null;
 
 // OPTIONAL: Tracking webhook (leave blank to disable server-side tracking)
-const TRACK_WEBHOOK_URL = "http://script.google.com/macros/s/AKfycbwMKQajX5j3s3iS5SJvcIkI7TCa_SQWDUcVs9eYQiwvCvm3JpI42ijke5gyCL7wNS_tvQ/exec"; // e.g. "https://script.google.com/macros/s/XXXX/exec"
+if (TRACK_WEBHOOK_URL && TRACK_WEBHOOK_URL.startsWith("http")) {
+  const params = new URLSearchParams({
+    action: "print",
+    reference: normalizeRef(record.reference),
+    name: record.name || "",
+    serial: record.serial || "",
+    page: location.href
+  });
 
+  // Use an image request (CORS-proof)
+  const img = new Image();
+  img.src = `${TRACK_WEBHOOK_URL}?${params.toString()}`;
+}
 const $ = (sel) => document.querySelector(sel);
 
 async function loadData(){
