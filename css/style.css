@@ -164,7 +164,9 @@
 }
 
 
-/* ===== A4 Print: force one clean page ===== */
+
+
+/* ===== A4 Print: single page, no duplicates ===== */
 @page {
   size: A4;
   margin: 10mm;
@@ -175,23 +177,31 @@
   body *{ visibility: hidden !important; }
 
   /* Show slip only */
-  #slipPreviewWrap, #slip, #slip *{ visibility: visible !important; }
+  #slip{ visibility: visible !important; }
+  #slip, #slip *{ visibility: visible !important; }
 
-  /* Place slip at top-left printable area */
+  /* IMPORTANT: keep the slip in normal flow (not fixed) to avoid duplicate rendering */
   #slip{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 190mm !important;     /* fits inside A4 with margins */
+    position: static !important;
+    width: 190mm !important;
     max-width: 190mm !important;
+    margin: 0 auto !important;
     border: none !important;
     box-shadow: none !important;
   }
 
-  /* Avoid accidental second page */
-  .slip-paper{ page-break-inside: avoid; break-inside: avoid; }
-  .slip-body, .slip-header{ page-break-inside: avoid; break-inside: avoid; }
+  /* Prevent page breaks */
+  .slip-paper, .slip-header, .slip-body{
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
 
-  /* Reduce watermark density */
+  /* If a browser still tries to paginate, slightly scale to fit */
+  #slip{
+    transform: scale(0.95);
+    transform-origin: top center;
+  }
+
+  /* Keep watermark soft */
   .slip-paper::before{ font-size: 72px; }
 }

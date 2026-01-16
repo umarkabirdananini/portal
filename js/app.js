@@ -6,7 +6,7 @@ let MASTER = [];
 let currentRecord = null;
 
 // OPTIONAL: Tracking webhook (leave blank to disable server-side tracking)
-const TRACK_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbwlY5uLfPqkIeNb8YnDfDbhkAVSmOPuFBwWcEiBe4C7HgtkOutVbFhq0UPYGZ-Uwl2u5g/exec"; // e.g. "https://script.google.com/macros/s/XXXX/exec"
+const TRACK_WEBHOOK_URL = ""; // e.g. "https://script.google.com/macros/s/XXXX/exec"
 
 const $ = (sel) => document.querySelector(sel);
 
@@ -113,20 +113,14 @@ function buildSlipHTML(r){
       </div>
 
       <div class="mt-4 notice-box">
-        <div class="fw-bold mb-1">📄 Notification & Next Steps</div>
+        <div class="fw-bold mb-1">📄 Next Steps</div>
         <div class="text-secondary">
           The printed slip should be presented at the <span class="fw-semibold">Office of the State Head of Service</span>,
-          <span class="fw-semibold">Usman Faruku Secretariat</span> 🏢, together with:
-          <ul class="mb-0 mt-2">
-            <li>Original credentials</li>
-            <li>Portal receipt 🧾</li>
-          </ul>
-          <div class="mt-2">
-            This serves as evidence of notification and invitation for the collection of appointment letters 📬.
-          </div>
+          <span class="fw-semibold">Usman Faruku Secretariat</span> 🏢, together with: <span class="fw-semibold">Original credentials</span>.
         </div>
       </div>
 
+      </div>
       <div class="mt-4 d-flex justify-content-between align-items-end flex-wrap gap-3">
         <div>
           <div class="small text-secondary">Signed by</div>
