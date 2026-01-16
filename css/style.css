@@ -168,61 +168,70 @@
 
 
 
-/* ===== A4 Print: truly print ONE slip page ===== */
+
+
+/* ===== A4 Print: one page, not blank =====
+   Use visibility (not display) so browsers render content reliably,
+   and pull the slip out of the normal layout to avoid extra pages.
+*/
 @page{
   size: A4;
   margin: 10mm;
 }
 
 @media print{
-  /* Hide everything by removing it from layout */
-  body *{
-    display: none !important;
+  /* Keep print colors */
+  *{
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 
-  /* Show slip only */
-  #slipPreviewWrap, #slip, #slip *{
-    display: block !important;
-  }
-
-  /* Ensure the slip is the only layout content */
   html, body{
-    height: auto !important;
+    background: #fff !important;
     margin: 0 !important;
     padding: 0 !important;
-    background: #fff !important;
   }
 
+  /* Hide everything */
+  body *{
+    visibility: hidden !important;
+  }
+
+  /* Show slip area only */
+  #slipPreviewWrap, #slipPreviewWrap *{
+    visibility: visible !important;
+  }
+
+  /* Position slip at top to prevent duplicate flow rendering */
   #slipPreviewWrap{
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
   }
 
   #slip{
-    width: 190mm !important;      /* fits inside A4 margins */
+    width: 190mm !important;
     max-width: 190mm !important;
     margin: 0 auto !important;
     border: none !important;
     box-shadow: none !important;
     overflow: hidden !important;
-  }
-
-  /* Reduce overall size to guarantee single page if content is tall */
-  #slip{
-    transform: scale(0.88) !important;
-    transform-origin: top center !important;
-  }
-
-  /* Prevent page breaks inside slip */
-  #slip, .slip-paper, .slip-header, .slip-body, .person-row, .notice-box{
     page-break-inside: avoid !important;
     break-inside: avoid !important;
   }
 
-  /* Print colors */
-  *{
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
+  /* Slight scale down to guarantee single page */
+  #slip{
+    transform: scale(0.90) !important;
+    transform-origin: top center !important;
+  }
+
+  /* Prevent breaks inside key blocks */
+  .slip-paper, .slip-header, .slip-body, .person-row, .notice-box{
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
   }
 }
