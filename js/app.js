@@ -1,9 +1,12 @@
 // Selection Slip App (Bootstrap + Vanilla JS)
 // Data source: ./data/masterlist.json
-// Tip: If you add an image URL column to the Excel later, re-export masterlist.json and use key: photoUrl
+// Optional tracking: set TRACK_WEBHOOK_URL to a Google Apps Script Web App URL (or any endpoint that accepts POST JSON)
 
 let MASTER = [];
 let currentRecord = null;
+
+// OPTIONAL: Tracking webhook (leave blank to disable server-side tracking)
+const TRACK_WEBHOOK_URL = ""; // e.g. "https://script.google.com/macros/s/XXXX/exec"
 
 const $ = (sel) => document.querySelector(sel);
 
@@ -36,10 +39,9 @@ function showStatus(kind, html){
   card.innerHTML = html;
 }
 
-function toggleActions(found){
-  $('#openSlipBtn').classList.toggle('d-none', !found);
-  $('#downloadBtn').classList.toggle('d-none', !found);
+function togglePrint(found){
   $('#printBtn').classList.toggle('d-none', !found);
+  $('#slipPreviewWrap').classList.toggle('d-none', !found);
 }
 
 function escapeHtml(str){
@@ -53,6 +55,7 @@ function buildSlipHTML(r){
   const dateStr = today.toLocaleDateString(undefined, { year:'numeric', month:'long', day:'numeric' });
 
   const photo = (r.photoUrl && String(r.photoUrl).trim()) ? r.photoUrl.trim() : 'https://via.placeholder.com/240x280.png?text=Passport';
+  const edu = (r.educationLevel && String(r.educationLevel).trim()) ? String(r.educationLevel).trim() : '—';
 
   return `
     <div class="slip-header">
@@ -79,10 +82,14 @@ function buildSlipHTML(r){
       </div>
 
       <div class="mt-4 person-row">
-        <img class="passport" alt="Applicant Passport" src="${escapeHtml(photo)}" onerror="this.src='https://via.placeholder.com/240x280.png?text=Passport'">
+        <img class="passport" alt="Applicant Passport"
+             src="${escapeHtml(photo)}"
+             onerror="this.src='https://via.placeholder.com/240x280.png?text=Passport'">
         <div>
           <div class="h4 fw-bold mb-1">${escapeHtml(r.name)}</div>
-          <div class="text-secondary mb-3">Congratulations! You have been selected and offered an appointment, subject to verification of your credentials.</div>
+          <div class="text-secondary mb-3">
+            Congratulations! You have been selected and offered an appointment, subject to verification of your credentials.
+          </div>
 
           <div class="meta-grid">
             <div class="meta">
@@ -90,8 +97,16 @@ function buildSlipHTML(r){
               <div class="v">${escapeHtml(r.course)}</div>
             </div>
             <div class="meta">
+              <div class="k">Education Level</div>
+              <div class="v">${escapeHtml(edu)}</div>
+            </div>
+            <div class="meta">
               <div class="k">LGA</div>
               <div class="v">${escapeHtml(r.lga)}</div>
+            </div>
+            <div class="meta">
+              <div class="k">Serial Number</div>
+              <div class="v">${escapeHtml(r.serial)}</div>
             </div>
           </div>
         </div>
@@ -134,77 +149,48 @@ function buildSlipHTML(r){
   `;
 }
 
-async function downloadPDF(){
-  if(!currentRecord) return;
-
-  const slipEl = $('#slip');
-
-  // Render at higher scale for crisp PDF
-  const canvas = await html2canvas(slipEl, {
-    scale: 2,
-    useCORS: true,
-    allowTaint: false,
-    backgroundColor: '#ffffff'
-  });
-
-  const imgData = canvas.toDataURL('image/png');
-  const { jsPDF } = window.jspdf;
-
-  // A4 portrait: 210 x 297 mm
-  const pdf = new jsPDF('p', 'mm', 'a4');
-
-  const pageWidth = pdf.internal.pageSize.getWidth();
-  const pageHeight = pdf.internal.pageSize.getHeight();
-
-  // Compute image dimensions in mm preserving aspect ratio
-  const imgWidth = pageWidth - 16; // margins
-  const imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-  let y = 8;
-
-  if(imgHeight <= pageHeight - 16){
-    pdf.addImage(imgData, 'PNG', 8, y, imgWidth, imgHeight);
-  }else{
-    // Multi-page
-    let remaining = imgHeight;
-    let sourceY = 0;
-
-    // Convert mm->px scaling factor for slicing
-    const pxPerMm = canvas.width / imgWidth;
-
-    while(remaining > 0){
-      const sliceHeightMm = Math.min(pageHeight - 16, remaining);
-      const sliceHeightPx = Math.floor(sliceHeightMm * pxPerMm);
-
-      const sliceCanvas = document.createElement('canvas');
-      sliceCanvas.width = canvas.width;
-      sliceCanvas.height = sliceHeightPx;
-
-      const ctx = sliceCanvas.getContext('2d');
-      ctx.drawImage(canvas, 0, sourceY, canvas.width, sliceHeightPx, 0, 0, canvas.width, sliceHeightPx);
-
-      const sliceImg = sliceCanvas.toDataURL('image/png');
-      pdf.addImage(sliceImg, 'PNG', 8, 8, imgWidth, sliceHeightMm);
-
-      remaining -= sliceHeightMm;
-      sourceY += sliceHeightPx;
-
-      if(remaining > 0) pdf.addPage();
-    }
+// ===== Tracking (client-side + optional server webhook) =====
+function trackSuccessfulGeneration(record){
+  try{
+    // Local log (works offline, per device/browser)
+    const key = "slip_generation_log";
+    const log = JSON.parse(localStorage.getItem(key) || "[]");
+    log.push({
+      reference: normalizeRef(record.reference),
+      name: record.name || "",
+      serial: record.serial || "",
+      ts: new Date().toISOString(),
+      ua: navigator.userAgent
+    });
+    localStorage.setItem(key, JSON.stringify(log));
+  }catch(e){
+    console.warn("Local tracking failed:", e);
   }
 
-  const safeRef = normalizeRef(currentRecord.reference).replace(/[^A-Z0-9-]/g,'');
-  pdf.save(`Selection_Slip_${safeRef || 'Candidate'}.pdf`);
+  // Optional server-side log
+  if(TRACK_WEBHOOK_URL && TRACK_WEBHOOK_URL.startsWith("http")){
+    fetch(TRACK_WEBHOOK_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        reference: normalizeRef(record.reference),
+        name: record.name || "",
+        serial: record.serial || "",
+        timestamp: new Date().toISOString(),
+        page: location.href
+      })
+    }).catch(()=>{ /* silently ignore */ });
+  }
 }
 
 function printSlip(){
-  // Open modal first (in case user printed from outside modal)
-  const modalEl = $('#slipModal');
-  const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
-  modal.show();
+  if(!currentRecord) return;
 
-  // Small delay so the slip is fully visible before printing
-  setTimeout(() => window.print(), 350);
+  // Track "generated successfully"
+  trackSuccessfulGeneration(currentRecord);
+
+  // Print only the slip (CSS @media print handles visibility)
+  window.print();
 }
 
 function wireUI(){
@@ -228,37 +214,26 @@ function wireUI(){
         <div class="fw-bold">Record not found</div>
         <div class="small">Your reference number was not found in the current master list. Please confirm and try again.</div>
       `);
-      toggleActions(false);
+      togglePrint(false);
       return;
     }
 
     // Found
     showStatus('success', `
       <div class="fw-bold">Selected ✅</div>
-      <div class="small">Your record was found. Click <b>View / Print Slip</b> to proceed.</div>
+      <div class="small">Your record was found. Click <b>Print Slip</b> to proceed.</div>
     `);
-    toggleActions(true);
+    togglePrint(true);
 
     // Toast
     const toast = bootstrap.Toast.getOrCreateInstance($('#successToast'), { delay: 4500 });
     toast.show();
 
-    // Build slip content
+    // Build slip preview
     $('#slip').innerHTML = buildSlipHTML(r);
   });
 
-  // Action buttons (outside modal)
-  $('#downloadBtn').addEventListener('click', downloadPDF);
   $('#printBtn').addEventListener('click', printSlip);
-
-  // Modal buttons
-  $('#modalDownloadBtn').addEventListener('click', downloadPDF);
-  $('#modalPrintBtn').addEventListener('click', ()=>window.print());
-
-  // Also rebuild slip when modal opens (ensures latest)
-  $('#slipModal').addEventListener('show.bs.modal', ()=>{
-    if(currentRecord) $('#slip').innerHTML = buildSlipHTML(currentRecord);
-  });
 }
 
 (async function init(){

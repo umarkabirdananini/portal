@@ -20,7 +20,7 @@
           <small class="opacity-75">Recruitment Selection Slip Portal</small>
         </div>
       </a>
-      <span class="badge rounded-pill text-bg-light text-dark border">Verification • Printing • PDF</span>
+      <span class="badge rounded-pill text-bg-light text-dark border">Verification • Print Slip</span>
     </div>
   </nav>
 
@@ -66,16 +66,19 @@
             </div>
 
             <div class="mt-4 d-flex flex-wrap gap-2">
-              <button id="openSlipBtn" class="btn btn-success d-none" type="button" data-bs-toggle="modal" data-bs-target="#slipModal">
-                📄 View / Print Slip
-              </button>
-              <button id="downloadBtn" class="btn btn-outline-dark d-none" type="button">
-                ⬇️ Download PDF
-              </button>
-              <button id="printBtn" class="btn btn-outline-primary d-none" type="button">
-                🖨️ Print
+              <button id="printBtn" class="btn btn-success d-none" type="button">
+                🖨️ Print Slip
               </button>
             </div>
+
+            <!-- Slip preview (shows only after successful search) -->
+            <div id="slipPreviewWrap" class="mt-4 d-none">
+              <div class="small text-secondary mb-2">Slip Preview</div>
+              <div class="d-flex justify-content-center">
+                <div id="slip" class="slip-paper shadow-sm"></div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -88,7 +91,7 @@
             <div class="d-grid gap-3">
               <div class="p-3 rounded-4 border bg-white">
                 <div class="fw-semibold">1) Generate your slip</div>
-                <div class="text-secondary small">Print or download it as a PDF from this portal.</div>
+                <div class="text-secondary small">Print it directly from this portal.</div>
               </div>
               <div class="p-3 rounded-4 border bg-white">
                 <div class="fw-semibold">2) Present at the Office of the State Head of Service</div>
@@ -122,38 +125,12 @@
     </div>
   </main>
 
-  <!-- Slip Modal -->
-  <div class="modal fade" id="slipModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content border-0 shadow-lg">
-        <div class="modal-header">
-          <div>
-            <div class="fw-bold">Selection Notification Slip</div>
-            <div class="small text-secondary">Print or download as PDF</div>
-          </div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body bg-light">
-          <div class="d-flex justify-content-center">
-            <div id="slip" class="slip-paper shadow-sm">
-              <!-- Filled by JS -->
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-outline-dark" id="modalDownloadBtn" type="button">⬇️ Download PDF</button>
-          <button class="btn btn-primary" id="modalPrintBtn" type="button">🖨️ Print</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Toast -->
   <div class="toast-container position-fixed bottom-0 end-0 p-3">
     <div id="successToast" class="toast text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="d-flex">
         <div class="toast-body">
-          🎉 Congratulations! Your record was found — you can generate your official slip now.
+          🎉 Congratulations! Your record was found — you can print your official slip now.
         </div>
         <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
       </div>
@@ -162,10 +139,6 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- html2canvas + jsPDF for PDF export -->
-  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
 
   <script src="./js/app.js"></script>
 </body>

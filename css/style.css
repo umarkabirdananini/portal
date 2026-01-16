@@ -162,3 +162,36 @@
   #slip{ position: fixed; left: 0; top: 0; width: 100% !important; border: none !important; box-shadow: none !important; }
   .slip-paper::before{ color: rgba(0,0,0,.06); }
 }
+
+
+/* ===== A4 Print: force one clean page ===== */
+@page {
+  size: A4;
+  margin: 10mm;
+}
+
+@media print{
+  /* Hide everything */
+  body *{ visibility: hidden !important; }
+
+  /* Show slip only */
+  #slipPreviewWrap, #slip, #slip *{ visibility: visible !important; }
+
+  /* Place slip at top-left printable area */
+  #slip{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 190mm !important;     /* fits inside A4 with margins */
+    max-width: 190mm !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Avoid accidental second page */
+  .slip-paper{ page-break-inside: avoid; break-inside: avoid; }
+  .slip-body, .slip-header{ page-break-inside: avoid; break-inside: avoid; }
+
+  /* Reduce watermark density */
+  .slip-paper::before{ font-size: 72px; }
+}
