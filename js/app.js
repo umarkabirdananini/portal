@@ -6,7 +6,7 @@ let MASTER = [];
 let currentRecord = null;
 
 // OPTIONAL: Tracking webhook (leave blank to disable server-side tracking)
-const TRACK_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycby_1-cui1kynNm9uJEsbpJPiJSe1tp19RYgNRK4ZmcrqHEHMA_mdMaEEUopZzHkFDANtg/exec"; // e.g. "https://script.google.com/macros/s/XXXX/exec"
+const TRACK_WEBHOOK_URL = "http://script.google.com/macros/s/AKfycbwMKQajX5j3s3iS5SJvcIkI7TCa_SQWDUcVs9eYQiwvCvm3JpI42ijke5gyCL7wNS_tvQ/exec"; // e.g. "https://script.google.com/macros/s/XXXX/exec"
 
 const $ = (sel) => document.querySelector(sel);
 
