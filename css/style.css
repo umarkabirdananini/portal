@@ -166,42 +166,63 @@
 
 
 
-/* ===== A4 Print: single page, no duplicates ===== */
-@page {
+
+
+/* ===== A4 Print: truly print ONE slip page ===== */
+@page{
   size: A4;
   margin: 10mm;
 }
 
 @media print{
-  /* Hide everything */
-  body *{ visibility: hidden !important; }
+  /* Hide everything by removing it from layout */
+  body *{
+    display: none !important;
+  }
 
   /* Show slip only */
-  #slip{ visibility: visible !important; }
-  #slip, #slip *{ visibility: visible !important; }
+  #slipPreviewWrap, #slip, #slip *{
+    display: block !important;
+  }
 
-  /* IMPORTANT: keep the slip in normal flow (not fixed) to avoid duplicate rendering */
+  /* Ensure the slip is the only layout content */
+  html, body{
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+  }
+
+  #slipPreviewWrap{
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
   #slip{
-    position: static !important;
-    width: 190mm !important;
+    width: 190mm !important;      /* fits inside A4 margins */
     max-width: 190mm !important;
     margin: 0 auto !important;
     border: none !important;
     box-shadow: none !important;
+    overflow: hidden !important;
   }
 
-  /* Prevent page breaks */
-  .slip-paper, .slip-header, .slip-body{
+  /* Reduce overall size to guarantee single page if content is tall */
+  #slip{
+    transform: scale(0.88) !important;
+    transform-origin: top center !important;
+  }
+
+  /* Prevent page breaks inside slip */
+  #slip, .slip-paper, .slip-header, .slip-body, .person-row, .notice-box{
     page-break-inside: avoid !important;
     break-inside: avoid !important;
   }
 
-  /* If a browser still tries to paginate, slightly scale to fit */
-  #slip{
-    transform: scale(0.95);
-    transform-origin: top center;
+  /* Print colors */
+  *{
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
-
-  /* Keep watermark soft */
-  .slip-paper::before{ font-size: 72px; }
 }
