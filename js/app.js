@@ -6,7 +6,7 @@ let MASTER = [];
 let currentRecord = null;
 
 const TRACK_WEBHOOK_URL =
-  "https://script.google.com/macros/s/AKfycbwMKQajX5j3s3iS5SJvcIkI7TCa_SQWDUcVs9eYQiwvCvm3JpI42ijke5gyCL7wNS_tvQ/exec";
+  "https://script.google.com/macros/s/AKfycbwMH0dOU_k1OeksFhuTgCoN-Rqi3ohNSFOJfkddia0UcLo3SdABQHYYCPdvnMsbsjNT6g/exec";
 
 const $ = (sel) => document.querySelector(sel);
 
