@@ -7,7 +7,7 @@ let currentRecord = null;
 
 /* MUST be HTTPS */
 const TRACK_WEBHOOK_URL =
-  "https://script.google.com/macros/s/AKfycbwMKQajX5j3s3iS5SJvcIkI7TCa_SQWDUcVs9eYQiwvCvm3JpI42ijke5gyCL7wNS_tvQ/exec";
+  "https://script.google.com/macros/s/AKfycbxLSML3csbZjm-0DKVcg0BDBQM2Nz9iqzXxUunrA98Ydeq115PlLiD1hRyn_MRnK8t33A/exec";
 
 const $ = (sel) => document.querySelector(sel);
 
