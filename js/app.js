@@ -91,7 +91,7 @@ function buildSlipHTML(r) {
         <img class="logo"
              src="https://sokotostate.gov.ng/wp-content/uploads/2024/06/Sokoto-State-Government-600-x-200-px-1.png">
         <div>
-          <div class="slip-title">Interview Notification Slip</div>
+          <div class="slip-title">Appointment Notification Slip</div>
           <div class="slip-subtitle">State Recruitment Committee</div>
         </div>
       </div>
