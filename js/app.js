@@ -124,11 +124,12 @@ function buildSlipHTML(r) {
     </div>
 
     <div class="notice-box mt-4">
-      <strong>📄 Next Steps</strong><br>
-      The printed slip should be presented at the
-      <strong>Office of the State Head of Service</strong>,
-      <strong>Usman Faruku Secretariat</strong> 🏢,
-      together with <strong>Original credentials</strong>.
+
+
+        <strong> 📄 Next Steps</strong><br>
+ <strong>The printed slip should be presented at the Office of the State Head of Service</strong> , 
+<strong> Usman Faruku Secretariat </strong> 🏢, 
+ together with the <strong>copies of your credentials at a date to be communicated later</strong>.
     </div>
 
     <div class="mt-4">
