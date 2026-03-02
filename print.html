@@ -20,6 +20,7 @@
       font-size: 14px;
     }
     .actions { display:flex; gap:10px; flex-wrap:wrap; margin: 10px 0 14px; }
+
     @media print {
       .tip, .actions { display: none !important; }
       .slip-paper { box-shadow: none !important; border: none !important; }
@@ -46,8 +47,21 @@
 
   <script>
     const html = sessionStorage.getItem("SLIP_HTML") || "";
-    document.getElementById("slip").innerHTML = html || "<div class='p-4'>Slip not found. Please go back and generate again.</div>";
-    document.getElementById("doPrint").addEventListener("click", () => window.print());
+    const slipRef = sessionStorage.getItem("SLIP_REF");
+    const slipName = sessionStorage.getItem("SLIP_NAME");
+
+    document.getElementById("slip").innerHTML =
+      html || "<div class='p-4'>Slip not found. Please go back and generate again.</div>";
+
+    // ✅ Set PDF filename using reference number
+    if (slipRef) {
+      document.title = slipRef;
+      // Optional: include name
+      // document.title = slipName ? `${slipRef} - ${slipName}` : slipRef;
+    }
+
+    document.getElementById("doPrint")
+      .addEventListener("click", () => window.print());
   </script>
 </body>
 </html>
