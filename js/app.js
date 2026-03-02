@@ -1,5 +1,5 @@
 /* =========================================================
-   Selection Slip App – FINAL (Desktop + iPhone SAFE)
+   Selection Slip App – FINAL (Desktop + iPhone SAFE + QR BALANCED)
    ========================================================= */
 
 let MASTER = [];
@@ -65,7 +65,7 @@ function escapeHtml(str) {
 }
 
 /* ------------------------------
-   Slip HTML
+   Slip HTML (PROFESSIONAL BALANCED VERSION)
 -------------------------------- */
 function buildSlipHTML(r) {
   const dateStr = new Date().toLocaleDateString(undefined, {
@@ -83,6 +83,10 @@ function buildSlipHTML(r) {
     r.educationLevel && r.educationLevel.trim()
       ? r.educationLevel.trim()
       : "—";
+
+  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(
+    normalizeRef(r.reference)
+  )}`;
 
   return `
   <div class="slip-header">
@@ -103,33 +107,72 @@ function buildSlipHTML(r) {
   </div>
 
   <div class="slip-body">
+
     <div class="d-flex justify-content-between mb-3">
       <div class="badge-chip">✅ SELECTED</div>
       <div class="badge-chip">Ref: ${escapeHtml(r.reference)}</div>
     </div>
 
-    <div class="person-row">
-      <img class="passport" src="${photo}"
-           onerror="this.src='https://via.placeholder.com/240x280.png?text=Passport'">
-      <div>
-        <h4>${escapeHtml(r.name)}</h4>
+    <!-- PHOTO + QR -->
+    <div style="display:flex; justify-content:center; gap:60px; margin-bottom:30px;">
 
-        <div class="meta-grid">
-          <div class="meta"><div class="k">Course Studied</div><div class="v">${escapeHtml(r.course)}</div></div>
-          <div class="meta"><div class="k">Education Level</div><div class="v">${escapeHtml(edu)}</div></div>
-          <div class="meta"><div class="k">LGA</div><div class="v">${escapeHtml(r.lga)}</div></div>
-          <div class="meta"><div class="k">Serial Number</div><div class="v">${escapeHtml(r.serial)}</div></div>
-        </div>
+      <div style="text-align:center;">
+        <img src="${photo}"
+             style="width:190px; height:220px; object-fit:cover; border:1px solid #222;"
+             onerror="this.src='https://via.placeholder.com/240x280.png?text=Passport'">
+        <div class="small mt-2">Passport Photograph</div>
       </div>
+
+      <div style="text-align:center;">
+        <img src="${qrUrl}"
+             style="width:180px; height:180px; border:1px solid #222;">
+        <div class="small mt-2">Scan for Verification</div>
+        <div class="small">${escapeHtml(r.reference)}</div>
+      </div>
+
+    </div>
+
+    <!-- NAME -->
+    <div style="text-align:center; margin-bottom:25px;">
+      <h4 style="margin:0;">${escapeHtml(r.name)}</h4>
+    </div>
+
+    <!-- BALANCED INFO GRID -->
+    <div style="
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+      border-top:1px solid #ccc;
+      padding-top:25px;
+    ">
+
+      <div style="border:1px solid #ddd; padding:14px;">
+        <div style="font-size:12px; color:#666;">Course Studied</div>
+        <div style="font-weight:600; margin-top:4px;">${escapeHtml(r.course)}</div>
+      </div>
+
+      <div style="border:1px solid #ddd; padding:14px;">
+        <div style="font-size:12px; color:#666;">Education Level</div>
+        <div style="font-weight:600; margin-top:4px;">${escapeHtml(edu)}</div>
+      </div>
+
+      <div style="border:1px solid #ddd; padding:14px;">
+        <div style="font-size:12px; color:#666;">Local Government Area</div>
+        <div style="font-weight:600; margin-top:4px;">${escapeHtml(r.lga)}</div>
+      </div>
+
+      <div style="border:1px solid #ddd; padding:14px;">
+        <div style="font-size:12px; color:#666;">Serial Number</div>
+        <div style="font-weight:600; margin-top:4px;">${escapeHtml(r.serial)}</div>
+      </div>
+
     </div>
 
     <div class="notice-box mt-4">
-
-
-        <strong> 📄 Next Steps</strong><br>
- <strong>The printed slip should be presented at the Office of the State Head of Service</strong> , 
-<strong> Usman Faruku Secretariat </strong> 🏢, 
- together with the <strong>copies of your credentials at a date to be communicated later</strong>.
+      <strong>📄 Next Steps</strong><br>
+      <strong>The printed slip should be presented at the Office of the State Head of Service</strong>, 
+      <strong>Usman Faruku Secretariat</strong> 🏢, 
+      together with the <strong>copies of your credentials at a date to be communicated later</strong>.
     </div>
 
     <div class="mt-4">
@@ -137,6 +180,7 @@ function buildSlipHTML(r) {
       <strong>Barr. Gandi Umar Muhammad, mni</strong><br>
       Secretary, State Recruitment Committee
     </div>
+
   </div>
   `;
 }
@@ -189,7 +233,6 @@ function wireUI() {
     const r = findRecordByRef(ref);
     currentRecord = r;
 
-    /* ❌ NOT FOUND MESSAGE (exact text requested) */
     if (!r) {
       showStatus(
         "danger",
@@ -200,7 +243,6 @@ function wireUI() {
       return;
     }
 
-    /* ✅ FOUND MESSAGE */
     showStatus(
       "success",
       `<div class="fw-bold">Congratulations!</div>
@@ -211,7 +253,6 @@ function wireUI() {
     $("#slip").innerHTML = buildSlipHTML(r);
   });
 
-  /* Guaranteed print binding */
   document.addEventListener("click", (e) => {
     if (e.target.closest("#printBtn")) {
       e.preventDefault();
