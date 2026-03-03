@@ -25882,6 +25882,25 @@
     "lga": "Sokoto North",
     "educationLevel": "NCE",
     "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/022sIMry1HMoZ6RUqpgMotc3BfRa1ZoG46Y73K43.jpg"
+  },
+  
+  {
+    "serial": 2877,
+    "reference": "SKO-2025-19436",
+    "name": "Nura Umar Ahmad",
+    "course": "Social Studies (Double Major )",
+    "lga": "Sokoto South",
+    "educationLevel": "NCE",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/86BHXFhyDkVEe3J4sGdkXogrYsLGo74xFyk6fbZ4.jpg"
+  },
+  { 			
+    "serial": 2878,
+    "reference": "SKO-2025-07633",
+    "name": "Hashimu Mu'azu",
+    "course": "Accounting",
+    "lga": "Goronyo",
+    "educationLevel": "Degree",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/Y2bah8VPh60pOs36YaNjlb4NDSBqup3XUgr9GYts.jpg"
   }
   
 ]
