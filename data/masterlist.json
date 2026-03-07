@@ -25902,6 +25902,41 @@
     "lga": "Goronyo",
     "educationLevel": "Degree",
     "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/Y2bah8VPh60pOs36YaNjlb4NDSBqup3XUgr9GYts.jpg"
-  }
-  
+  },
+ {
+  "serial": 2879,
+  "reference": "SKO-2025-34911",
+  "name": "Ahmed Ibrahim Magaji",
+  "course": "Education Islamic Studies",
+  "lga": "Sokoto South",
+  "educationLevel": "Degree",
+  "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/ZahxW4RJpjO98eYPQZBxeilu0QWRtClJ0WUOaaAI.png"
+},
+{
+  "serial": 2880,
+  "reference": "SKO-2025-56187",
+  "name": "Hauwau Muhammad A",
+  "course": "English/Social Studies",
+  "lga": "Sokoto South",
+  "educationLevel": "NCE",
+  "photoUrl": "https://sokotostate.gov.ng/wp-content/uploads/WhatsApp%20Image%202026-03-01%20at%206.16.26%E2%80%AFAM.jpeg"
+},
+{
+  "serial": 2881,
+  "reference": "SKO-2025-42507",
+  "name": "Bashir Sani Yabo",
+  "course": "Business Management",
+  "lga": "Yabo",
+  "educationLevel": "Degree",
+  "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/ZnSfqaX2tX8V3ivV99bS904XLRyBgA5Oc3gzlMW3.jpg"
+},
+{
+  "serial": 2882,
+  "reference": "SKO-20250927155706-0631998",
+  "name": "Amina Ibrahim",
+  "course": "B.A Education Islamic",
+  "lga": "Sokoto North",
+  "educationLevel": "Degree",
+  "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/WtqtNsYxqTC1htgoDaFW7MCgG3eTEHQYkOGMawGk.jpg"
+}
 ]
