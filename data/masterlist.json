@@ -26186,5 +26186,15 @@
 "lga": "Sokoto South",
 "educationLevel": "Degree",
 "photoUrl": "https://sokotostate.gov.ng/wp-content/uploads/WhatsApp%20Image%202026-03-10%20at%205.50.30%E2%80%AFPM.jpeg"
+},
+	{
+"serial": 2910,
+"reference": "SKO-20250927165706-0167279",
+"name": "Rahmat Abdullahi Manu",
+"course": "Biology/Physic",
+"lga": "Wamakko",
+"educationLevel": "NCE",
+"photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/0MJXeDte6mIPWk4SW03zh2s04O2DHPUJURCnXmMi.jpg"
 }
+	
 ]
