@@ -26207,5 +26207,14 @@
     "educationLevel": "Degree",
     "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/9mOxvqwUnAWEe47GEowleahMUXBrga0ie92k2aUI.jpg"
 }
-	
+	,
+	{
+    "serial": 2912,
+    "reference": "SKO-20250929113523-0059298",
+    "name": "Aisha Abubakar",
+    "course": "Higher National Diploma In Science Laboratory Technology (Micro Biology)",
+    "lga": "Sokoto North",
+    "educationLevel": "HND",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/VdzDBdE5JszEoycxt7hEorzFG6GGLBCTi2DUfNBZ.jpg"
+}
 ]
