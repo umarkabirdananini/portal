@@ -17199,15 +17199,15 @@
     "educationLevel": "Degree",
     "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/ctSBrgkcNyh51wVInIJnn3QgqmQIeTyMPmRQ4ztf.jpg"
   },
-  {
+ {
     "serial": 1912,
     "reference": "SKO-2025-63366",
-    "name": "Zayyanu",
-    "course": "B Sc Computer Science",
+    "name": "Aliyu Mande",
+    "course": "B.A.Ed. History",
     "lga": "Wamakko",
     "educationLevel": "Degree",
-    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/Jgxku8vJDiX8FAr0mY8lUuRnYJqd8L3PXNp8g3Rb.jpg"
-  },
+    "photoUrl": "https://sokotostate.gov.ng/wp-content/uploads/WhatsApp%20Image%202026-03-15%20at%2012.07.03%E2%80%AFPM.jpeg"
+},
   {
     "serial": 1913,
     "reference": "SKO-2025-86727",
@@ -26196,6 +26196,16 @@
 "lga": "Gada",
 "educationLevel": "Degree",
 "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/6BKtOb3Ps6g8kVcmJwNZr4nLGVKt72nNkVFD3Wrf.jpg"
-}
+},
+	
+{
+    "serial": 2911',
+    "reference": "SKO-2025-79580",
+    "name": "KABIRU BELLO",
+    "course": "Bachelor Of Science Education (Biology)",
+    "lga": "Wamakko",
+    "educationLevel": "Degree",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/9mOxvqwUnAWEe47GEowleahMUXBrga0ie92k2aUI.jpg"
+},
 	
 ]
