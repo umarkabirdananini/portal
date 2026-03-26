@@ -2771,15 +2771,16 @@
     "educationLevel": "Degree",
     "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/s1VstgTgTpxK4maOp7bS8aHBhhgcVqLeD78XGoTm.jpg"
   },
-  {
+ {
     "serial": 309,
-    "reference": "SKO-2025-33473",
-    "name": "Muhammad Attahiru",
-    "course": "Agriculture (Animal Science)",
-    "lga": "Rabah",
-    "educationLevel": "Degree",
-    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/FAIKESJZ2j5q806vgtv6lyPLzhgBbNUk9pdvUfDZ.jpg"
-  },
+    "reference": "SKO-2025-10756",
+    "name": "Hadiza Shehu Gada",
+    "course": "Biology/Chemistry",
+    "lga": "Gada",
+    "educationLevel": "NCE",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/Jpk9CdOUMf9TwDNjl6uDkOK2k31Mf5hSS2osBFGi.jpg"
+}
+	,
   {
     "serial": 310,
     "reference": "SKO-20251011130233-0321888",
@@ -7488,15 +7489,15 @@
     "educationLevel": "HND",
     "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/fV4bD09Fv13rFkZZJP7yfCiw9eIpIal9uwCahbBo.jpg"
   },
-  {
+ {
     "serial": 833,
-    "reference": "SKO-2025-29923",
-    "name": "Bello Muhammad Lofa",
-    "course": "Medical Laboratory Technician",
-    "lga": "Tureta",
-    "educationLevel": "HND",
-    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/gaZVUWN0gyO56YKlSr2pJLnzYmJ3I0MhgIdfA2Fs.jpg"
-  },
+    "reference": "SKO-2025-99634",
+    "name": "Yusuf Ahmed",
+    "course": "B Sc. SOCIOLOGY",
+    "lga": "Sokoto North",
+    "educationLevel": "Degree",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/h1YpkSmoJI3xMyH5JVgAC80h95xebBgqb8QSYBIO.jpg"
+},
   {
     "serial": 834,
     "reference": "SKO-2025-11340",
