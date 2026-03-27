@@ -21789,14 +21789,15 @@
     "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/qPPLgJKleyR44jks6fo7TYRfCfC6hmdohhr2MAck.jpg"
 },
     {
-        "serial": 2422,
-        "reference": "SKO-20251005213746-0730293",
-        "name": "Mu'Azu Isah Achida",
-        "lga": "Wurno",
-        "educationLevel": "Degree",
-        "course": "Economic",
-        "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/y46m9WSQsbsTEHO5KFCCXbYhUkLEiYC3F6VkdKgs.jpg"
-    },
+    "serial": 2422,
+    "reference": "SKO-2025-01177",
+    "name": "Murtala Tukur",
+    "lga": "Sokoto South",
+    "educationLevel": "HND",
+    "course": "HIGHER NATIONAL DIPLOMA IN SCIENCE LABORATORY TECHNOLOGY ( MICROBIOLOGY )",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/DYoZOqmoxAyQi1wzm467dDtqxa7UuKCV3uLCRC7P.jpg"
+}
+       ,
     {
         "serial": 2423,
         "reference": "SKO-2025-77219",
@@ -21860,15 +21861,17 @@
         "course": "Biology /chemistry",
         "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/4Q2yGA1ERZwc9XFAMe73ubndt0BbZsieJSiCryb9.jpg"
     },
-    {
-        "serial": 2430,
-        "reference": "SKO-2025-66910",
-        "name": "Isah Isa Hassan",
-        "lga": "Isa",
-        "educationLevel": "Degree",
-        "course": "B. Sc. Ed Biology",
-        "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/Ur5N5MnGmfwKaxkdoP6IZ7s9a31S4AJf0rqGCrIx.jpg"
-    },
+   {
+    "serial": 2430,
+    "reference": "SKO-2025-49021",
+    "name": "Aliyu",
+    "lga": "Wamakko",
+    "educationLevel": "Degree",
+    "course": "B.A English Language",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/8ZLdKS8WmujXZQHBa6ZjNkUF5ReRZc93pYlafBLp.jpg"
+}
+    
+    ,
     {
         "serial": 2431,
         "reference": "SKO-20250928100745-0986028",
