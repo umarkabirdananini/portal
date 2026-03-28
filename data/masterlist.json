@@ -21870,17 +21870,16 @@
     "course": "B.A English Language",
     "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/8ZLdKS8WmujXZQHBa6ZjNkUF5ReRZc93pYlafBLp.jpg"
 }
-    
-    ,
-    {
-        "serial": 2431,
-        "reference": "SKO-20250928100745-0986028",
-        "name": "Sulaiman Abubakar Tarah",
-        "lga": "Sabon Birni",
-        "educationLevel": "NCE",
-        "course": "Social Studies ( Double Major)",
-        "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/iE6u2HhRgtHxoCWHIBSIaKfNWmqXczC6fLTQyI1Z.jpg"
-    },
+ ,{
+    "serial": 2431,
+    "reference": "SKO-2025-12226",
+    "name": "Salmanu Bello Shehu",
+    "lga": "Sokoto North",
+    "educationLevel": "Degree",
+    "course": "B Sc Edu Chemistry",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/pIrKt7Y97pofo0DwJamZTX2lbikmxsCN7DE1OmSp.jpg"
+}
+   ,
     {
         "serial": 2432,
         "reference": "SKO-2025-76107",
