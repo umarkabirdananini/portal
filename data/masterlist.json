@@ -21962,15 +21962,15 @@
         "course": "Actuarial Science",
         "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/5oYf7KNQT7wPMvkyquDFDYEXfJxNn4O3MzpGEOeb.jpg"
     },
-    {
-        "serial": 2441,
-        "reference": "SKO-20251008194213-0907345",
-        "name": "Badamasi Umar",
-        "lga": "Sabon Birni",
-        "educationLevel": "NCE",
-        "course": "Islamic/Geography",
-        "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/46oeevTrWGQGYPK75UZ2r02FWG6o6FhFx1hFWzIl.jpg"
-    },
+   {
+    "serial": 2441,
+    "reference": "SKO-20251008194213-0907345",
+    "name": "Badamasi Umar",
+    "lga": "Sabon Birni",
+    "educationLevel": "NCE",
+    "course": "Islamic/Geography",
+    "photoUrl": ""
+},
     {
         "serial": 2442,
         "reference": "SKO-2025-81278",
