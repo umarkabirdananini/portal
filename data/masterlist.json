@@ -11771,15 +11771,16 @@
         "course": "Applied Chemistry",
         "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/0zkCXCdGgrqWc5TOCFEiZGTwLLZOLyE205FqSwdB.png"
     },
-    {
-        "serial": 1309,
-        "reference": "SKO-2025-34971",
-        "name": "Sadiya Safiyanu Masari",
-        "lga": "Rabah",
-        "educationLevel": "Degree",
-        "course": "Agriculture Extension And Rural Development",
-        "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/8pcezv1PbMaRjPt8eNMQXXhOXjVkQE59iX6Y2vCW.jpg"
-    },
+    
+   {
+    "serial": 1309,
+    "reference": "SKO-2025-49165",
+    "name": "suleiman bello",
+    "lga": "Sokoto South",
+    "educationLevel": "Degree",
+    "course": "Bsc Biology",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/qP1qMQtKodPwujnxnd8gvJjiRJ4vN8TcL1ALIBf9.jpg"
+},
     {
         "serial": 1310,
         "reference": "SKO-2025-01116",
@@ -22387,15 +22388,15 @@
     "course": "Public Administration",
     "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/O60KIabWJYe4rkhvXXnjqptluoIfygrHbX171Mf6.png"
 },
-    {
-        "serial": 2488,
-        "reference": "SKO-20251003144930-0098855",
-        "name": "Mukhtar Muhammad",
-        "lga": "Wamakko",
-        "educationLevel": "HND",
-        "course": "Electrical Electronic Engineering",
-        "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/h0iYZk7UKfceHue32YRLRUcW8EFJD40PhOoGdopj.jpg"
-    },
+{
+    "serial": 2488,
+    "reference": "SKO-2025-96586",
+    "name": "Sayudi Musa",
+    "lga": "Sokoto South",
+    "educationLevel": "Degree",
+    "course": "Education Economics",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/8qxeGxuWKUpgopXl2crbwweVelugMasHv4hdRPi5.jpg"
+},
     {
         "serial": 2489,
         "reference": "SKO-2025-44260",
