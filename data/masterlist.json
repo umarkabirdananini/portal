@@ -2430,14 +2430,15 @@
         "photoUrl":"https:\/\/employment-portal-uploads.s3.eu-west-1.amazonaws.com\/photos\/profiles\/gbqmHj3221lvrIPhnWXb8GgMctgeS3QnRskMpNvd.jpg"
     },
     {
-        "serial":271,
-        "reference":"SKO-2025-79715",
-        "name":"Junaidu Rabi'U",
-        "lga":"Kebbe",
-        "educationLevel":"Degree",
-        "course":"B Sc Political Science",
-        "photoUrl":"https:\/\/employment-portal-uploads.s3.eu-west-1.amazonaws.com\/photos\/profiles\/YmYZoh4eshRgFi4ldJ9yAPqBYtWAyJYj8b9LiO6b.jpg"
-    },
+    "serial": 271,
+    "reference": "SKO-2025-88921",
+    "name": "Abubakar Yahaya",
+    "lga": "Rabah",
+    "educationLevel": "HND",
+    "course": "HIGHER NATIONAL DIPLOMA IN SCIENCE LABORATORY TECHNOLOGY ( MICROBIOLOGY )",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/G3pjWlESyJz88nMgrnm0dQTun6fxnutPjcBUBxFH.jpg"
+}
+    ,
     {
         "serial":272,
         "reference":"SKO-20250930173441-0668429",
