@@ -2060,15 +2060,16 @@
         "course":"B Sc Computer Science",
         "photoUrl":"https:\/\/employment-portal-uploads.s3.eu-west-1.amazonaws.com\/photos\/profiles\/apQNQsfROsKXRrNHuksMBgnb20b7esZe4QTPjebw.png"
     },
-    {
-        "serial":230,
-        "reference":"SKO-2025-98441",
-        "name":"Auwal Garba",
-        "lga":"Isa",
-        "educationLevel":"Degree",
-        "course":"Mathematics",
-        "photoUrl":"https:\/\/employment-portal-uploads.s3.eu-west-1.amazonaws.com\/photos\/profiles\/uMvBC4tUTLEwVtLnGQMouLuiTcU7MJchB9WZEthx.jpg"
-    },
+   {
+    "serial": 230,
+    "reference": "SKO-2025-27809",
+    "name": "Aishatu Mohammed Usman",
+    "lga": "Sokoto South",
+    "educationLevel": "Degree",
+    "course": "B.Sc. Business Administration",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/o28iywsoi6XnV4KTQiAcVMMrJwMmbSirHAtHQ8ka.jpg"
+}
+    ,
     {
         "serial":231,
         "reference":"SKO-2025-79926",
