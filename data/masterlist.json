@@ -2782,15 +2782,16 @@
         "course":"Biology\/Chemistry",
         "photoUrl":"https:\/\/sokotostate.gov.ng\/wp-content\/uploads\/hadiza.jpeg"
     },
-    {
-        "serial":310,
-        "reference":"SKO-20251011130233-0321888",
-        "name":"Muhammad Mannir Musa",
-        "lga":"Rabah",
-        "educationLevel":"NCE",
-        "course":"Business Education",
-        "photoUrl":"https:\/\/employment-portal-uploads.s3.eu-west-1.amazonaws.com\/photos\/profiles\/OJYxdCFbautevtqGgg5hdTFHy1oztQAWbPxMEjrv.jpg"
-    },
+ {
+    "serial": 310,
+    "reference": "SKO-20250927104049-0734380",
+    "name": "Sumayya Saidu Sani",
+    "lga": "Sokoto North",
+    "educationLevel": "Degree",
+    "course": "B.Agriculture (Animal Science)",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/xO12KsL1GIVDfgM5qrwidEQPthOyp1oTDs7pNwGm.jpg"
+}
+    ,
     {
         "serial":311,
         "reference":"SKO-2025-61292",
