@@ -3974,15 +3974,16 @@
     "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/wkwYMyeDKlg0XYyf55ImRQOcmwhJRyNp2wVkDdTr.jpg"
 }
     ,
-    {
-        "serial":442,
-        "reference":"SKO-20250928095727-0181252",
-        "name":"Aisha Abubakar Musa",
-        "lga":"Sokoto North",
-        "educationLevel":"Degree",
-        "course":"Agricultural Science [Fisheries]",
-        "photoUrl":"https:\/\/employment-portal-uploads.s3.eu-west-1.amazonaws.com\/photos\/profiles\/XUFlmZ4fI3DuxZqeHCWb8xJgcpuENbkmocpoCjvX.jpg"
-    },
+   {
+    "serial": 442,
+    "reference": "SKO-2025-00124",
+    "name": "Maryam Abubakar Kaoje",
+    "lga": "Sokoto North",
+    "educationLevel": "Degree",
+    "course": "BSC STATISTICS",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/u30ilhYdVZ5O9jSGuq1e3KPCfHVeHc2TtjdHKVgj.jpg"
+}
+    ,
     {
         "serial":443,
         "reference":"SKO-2025-48700",
