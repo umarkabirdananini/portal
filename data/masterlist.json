@@ -3964,15 +3964,16 @@
         "course":"B.Sc Ed Chemistry",
         "photoUrl":"https:\/\/employment-portal-uploads.s3.eu-west-1.amazonaws.com\/photos\/profiles\/iE7abkoNuuEHfcic6IK8nDlCyRDalq1F3QDKH6LS.jpg"
     },
-    {
-        "serial":441,
-        "reference":"SKO-2025-11972",
-        "name":"Bashar Muhammad",
-        "lga":"Sokoto North",
-        "educationLevel":"HND",
-        "course":"HEALTH INFORMATION MANAGEMENT",
-        "photoUrl":"https:\/\/employment-portal-uploads.s3.eu-west-1.amazonaws.com\/photos\/profiles\/aXnWdelWWFnlVbeuj4sEj7o3YXHURygoUqeSfw49.jpg"
-    },
+   {
+    "serial": 441,
+    "reference": "SKO-2025-04125",
+    "name": "Mustapha Sulaiman",
+    "lga": "Sokoto South",
+    "educationLevel": "Degree",
+    "course": "B Sc Biochemistry",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/wkwYMyeDKlg0XYyf55ImRQOcmwhJRyNp2wVkDdTr.jpg"
+}
+    ,
     {
         "serial":442,
         "reference":"SKO-20250928095727-0181252",
