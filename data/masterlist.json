@@ -2927,15 +2927,17 @@
         "course":"B Ed Educational Management",
         "photoUrl":"https:\/\/employment-portal-uploads.s3.eu-west-1.amazonaws.com\/photos\/profiles\/KrSPZuUQK3bB8uTe3wQLCNu8Xeyq9NWst0i9MD5Y.jpg"
     },
+ 
     {
-        "serial":326,
-        "reference":"SKO-2025-33464",
-        "name":"Hassan Bello Jabo",
-        "lga":"Rabah",
-        "educationLevel":"Degree",
-        "course":"Applied Biology and Biotechnology",
-        "photoUrl":"https:\/\/employment-portal-uploads.s3.eu-west-1.amazonaws.com\/photos\/profiles\/VC8mKqBMB0ASJ3uKF12zxPo5725JpX66O1VBJitk.jpg"
-    },
+    "serial": 326,
+    "reference": "SKO-2025-30954",
+    "name": "Maryam Nasir",
+    "lga": "Sokoto North",
+    "educationLevel": "Degree",
+    "course": "BSC Political Science",
+    "photoUrl": "https://sokotostate.gov.ng/wp-content/uploads/WhatsApp%20Image%202026-04-04%20at%204.24.32%E2%80%AFPM.jpeg"
+}
+    ,
     {
         "serial":327,
         "reference":"SKO-20250929193624-0308733",
