@@ -26188,5 +26188,78 @@
         "educationLevel":"Degree",
         "course":"B Sc Economics",
         "photoUrl":"https:\/\/employment-portal-uploads.s3.eu-west-1.amazonaws.com\/photos\/profiles\/6BKtOb3Ps6g8kVcmJwNZr4nLGVKt72nNkVFD3Wrf.jpg"
-    }
+    },
+
+  {
+    "serial": 2911,
+    "reference": "SKO-2025-72413",
+    "name": "Jabiru Abdulhayat",
+    "lga": "Isa",
+    "educationLevel": "Degree",
+    "course": "B Sc Statistics",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/2XRIMewmqBZOOPBXyOzBqZpBF62E6lZf9fVSYYWZ.jpg"
+  },
+  {
+    "serial": 2912,
+    "reference": "SKO-20251001090757-0157996",
+    "name": "Hafsat Bello Danta",
+    "lga": "Sokoto North",
+    "educationLevel": "NCE",
+    "course": "Primary Education (Double Major)",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/DLORfSY4zZ4Phegm906eo2uGMTt3dvt0iAaCfqiB.jpg"
+  },
+  {
+    "serial": 2913,
+    "reference": "SKO-2025-87901",
+    "name": "SARATU ABDULLAHI",
+    "lga": "Sokoto South",
+    "educationLevel": "Degree",
+    "course": "B Sc IN MICROBIOLOGY",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/ue4T6uWSuRWSfg5yJY3ucF1gGddVXVN72cB31ffj.jpg"
+  },
+  {
+    "serial": 2914,
+    "reference": "SKO-20250927112251-0461356",
+    "name": "ABDULRAHMAN ABDULLAHI",
+    "lga": "Rabah",
+    "educationLevel": "Degree",
+    "course": "BSC. ISLAMIC STUDIES",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/2FGCPEkShzyHVaoE4QBmSSR4E3cx7EIdksJgdook.jpg"
+  },
+  {
+    "serial": 2915,
+    "reference": "SKO-20250927153252-0842035",
+    "name": "Bashar Mustapha S Fulani",
+    "lga": "Gwadabawa",
+    "educationLevel": "NCE",
+    "course": "Economic /Social Studies",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/6reiFZpLQlB0R8ArUleUDMmFgerUi1uUBKwBkVzH.jpg"
+  },
+  {
+    "serial": 2916,
+    "reference": "SKO-20251011182123-0191818",
+    "name": "Hindatu Aliyu",
+    "lga": "Sokoto South",
+    "educationLevel": "NCE",
+    "course": "Early Childhood Care Development And Education Double Major",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/XldCA49VDfzV1M9tkHqk30bpojUJjxCUsYmWW6DB.jpg"
+  },
+  {
+    "serial": 2917,
+    "reference": "SKO-20251001130035-0033744",
+    "name": "Malami Alkali",
+    "lga": "Kware",
+    "educationLevel": "NCE",
+    "course": "Geography/Mathematics",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/Gpp5tx4R3yK2sDf4i3B11dMMNTk51Mg1qUw8vpoT.jpg"
+  },
+  {
+    "serial": 2918,
+    "reference": "SKO-2025-21964",
+    "name": "Kasimu Altine",
+    "lga": "Dange-Shuni",
+    "educationLevel": "Degree",
+    "course": "Islamic Studies",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/rVRaKoPQTrpIKsZ5ateVGoCet0eqopmQkQQiXgbx.jpg"
+  }
 ]
