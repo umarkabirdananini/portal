@@ -6066,14 +6066,14 @@
         "photoUrl":"https:\/\/employment-portal-uploads.s3.eu-west-1.amazonaws.com\/photos\/profiles\/E2a2kA2wVELxgoQzeSGxSBX72vceVVbvvhAGAp8R.jpg"
     },
     {
-        "serial":675,
-        "reference":"SKO-2025-03973",
-        "name":"Bilyaminu",
-        "lga":"Sokoto South",
-        "educationLevel":"Degree",
-        "course":"B.A English Language",
-        "photoUrl":"https:\/\/employment-portal-uploads.s3.eu-west-1.amazonaws.com\/photos\/profiles\/d9yUxPC3OI2fbCYsMIKEWjzp9zoy4EpZqEZvutHb.jpg"
-    },
+  "serial": 675,
+  "reference": "SKO-2025-61847",
+  "name": "Faria Ahmad Yahaya",
+  "lga": "Sokoto South",
+  "educationLevel": "Degree",
+  "course": "B Sc Statistics",
+  "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/bXzQpNxt6vjY6tSTaCNAyGTKmPumUpU4P67PBr0k.jpg"
+},
     {
         "serial":676,
         "reference":"SKO-2025-80397",
