@@ -12934,15 +12934,16 @@
     "course": "B A Education/Islamic Studies",
     "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/kpu9mlAsvQA6gYwoGJXwXjgJwmfubpHlUDfzbNtp.jpg"
   },
-  {
-    "serial": 1438,
-    "reference": "SKO-20251003093454-0509706",
-    "name": "Zurkannaini Aminu",
-    "lga": "Sokoto North",
-    "educationLevel": "NCE",
-    "course": "BIO/INTER SCIENCE",
-    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/uTF54CDgA4H9IfsVpCFOMt3vaJuvaHPMEuHa6weh.jpg"
-  },
+{
+  "serial": 1438,
+  "reference": "SKO-2025-23631",
+  "name": "AMINU ABDULLAHI",
+  "lga": "Tambawal",
+  "educationLevel": "Degree",
+  "course": "B.Sc Physics",
+  "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/0XXazCbcvJpuzN1QF242thsTxPqTpN3KJ8FDyU5f.jpg"
+}
+  ,
   {
     "serial": 1439,
     "reference": "SKO-20250928141152-0773838",
@@ -12970,15 +12971,16 @@
     "course": "Biology/Geography",
     "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/LYx9QfMqQ18GJc5PM3o6zmAcSgonOrHbncLgf5As.jpg"
   },
-  {
-    "serial": 1442,
-    "reference": "SKO-2025-82869",
-    "name": "Ikililu Aliyu",
-    "lga": "Sokoto North",
-    "educationLevel": "Degree",
-    "course": "B Sc Statistics",
-    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/kjDChZFvp4T5rtOPPtklFcz8PdjjKP3Wee3aQHqu.png"
-  },
+ {
+  "serial": 1442,
+  "reference": "SKO-2025-08350",
+  "name": "Muslim Bello",
+  "lga": "Tambawal",
+  "educationLevel": "HND",
+  "course": "Higher National Diploma In Science Laboratory Technology (Chemistry Option)",
+  "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/pD2U6fOMViaKjOphq58PBIWiW5SRgH37jE17KAW8.png"
+}
+  ,
   {
     "serial": 1443,
     "reference": "SKO-2025-02098",
