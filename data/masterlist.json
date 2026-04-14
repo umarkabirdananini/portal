@@ -13820,15 +13820,17 @@
     "course": "Agriculture",
     "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/23KTZtO9HaIXjUDdY4ywdrvYJdOdmcMclkOs44Y5.jpg"
   },
+  
   {
-    "serial": 1536,
-    "reference": "SKO-20251005113510-0290118",
-    "name": "Hajarat Isma'Il",
-    "lga": "Sokoto North",
-    "educationLevel": "Degree",
-    "course": "B.SC Education Chemistry",
-    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/5UVcTSaJcYijHSssQ2DbPGJ948dcamDZUDuDwfEc.jpg"
-  },
+  "serial": 1536,
+  "reference": "SKO-2025-00032",
+  "name": "Kabiru Shehu",
+  "lga": "Sokoto South",
+  "educationLevel": "Degree",
+  "course": "Bsc Education Economics",
+  "photoUrl": "https://sokotostate.gov.ng/image-uploader/uploads/img_69de312a447e67.19906258.jpeg"
+}
+  ,
   {
     "serial": 1537,
     "reference": "SKO-2025-06700",
@@ -13847,15 +13849,16 @@
     "course": "Hausa",
     "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/pVwVge7M72zD55ggx7KRnpzBtk6vjLH7ElZgsTvB.jpg"
   },
-  {
-    "serial": 1539,
-    "reference": "SKO-2025-44902",
-    "name": "Safiya Zubairu",
-    "lga": "Sokoto North",
-    "educationLevel": "Degree",
-    "course": "B. ED Primary Education",
-    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/BJlqC4NnByiwxALsUNtvGewmzMYC7QC5xXO0GsG9.jpg"
-  },
+ {
+  "serial": 1539,
+  "reference": "SKO-2025-00033",
+  "name": "Ibrahim Abubakar",
+  "lga": "Sokoto South",
+  "educationLevel": "NCE",
+  "course": "ECCE",
+  "photoUrl": "https://sokotostate.gov.ng/image-uploader/uploads/img_69de311276b800.80210041.jpeg"
+}
+  ,
   {
     "serial": 1540,
     "reference": "SKO-2025-65239",
@@ -14073,14 +14076,15 @@
     "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/ztgrTpLynQKZvU4eouSGZ3uIYJHyW08H8UFpKlOP.jpg"
   },
   {
-    "serial": 1564,
-    "reference": "SKO-2025-55259",
-    "name": "Bilal Sidi Abbas",
-    "lga": "Sokoto South",
-    "educationLevel": "Degree",
-    "course": "Bs Sociology",
-    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/HQaZQYYWVMzKtEHSSSVwfLH1xhr3A1mQMtOhWbnb.jpg"
-  },
+  "serial": 1564,
+  "reference": "SKO-2025-00034",
+  "name": "Aisha Aliyu",
+  "lga": "Sokoto South",
+  "educationLevel": "Degree",
+  "course": "Biochemistry",
+  "photoUrl": "https://sokotostate.gov.ng/image-uploader/uploads/img_69de3857554506.91264580.jpeg"
+}
+  ,
   {
     "serial": 1565,
     "reference": "SKO-2025-16131",
