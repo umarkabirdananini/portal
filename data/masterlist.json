@@ -5418,15 +5418,14 @@
     "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/elIcOEYGGJi8JrVVhQACP1RMQHqwizgO0ZpRXoyF.jpg"
   },
   {
-  "serial": 603,
-  "reference": "SKO-2025-35864",
-  "name": "Yusuf Sani",
-  "lga": "Wamakko",
-  "educationLevel": "HND",
-  "course": "HIGHER NATIONAL DIPLOMA IN SCIENCE LABORATORY TECHNOLOGY ( MICROBIOLOGY )",
-  "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/QUtnkHpxaQ90ijcasbipc7z6N0nOxyocX2Fnfzq0.jpg"
-}
-  ,
+    "serial": 603,
+    "reference": "SKO-2025-35864",
+    "name": "Yusuf Sani",
+    "lga": "Wamakko",
+    "educationLevel": "HND",
+    "course": "HIGHER NATIONAL DIPLOMA IN SCIENCE LABORATORY TECHNOLOGY ( MICROBIOLOGY )",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/QUtnkHpxaQ90ijcasbipc7z6N0nOxyocX2Fnfzq0.jpg"
+  },
   {
     "serial": 604,
     "reference": "SKO-2025-32825",
@@ -22402,7 +22401,7 @@
     "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/msjKIpVhystsAMj5EF7nbxwkS0wuaTLOt8Wl1QYU.jpg"
   },
   {
-    "serial": 2670,
+    "serial": 2490,
     "reference": "SKO-2025-70178",
     "name": "Sadam Umar",
     "lga": "Sokoto North",
@@ -24022,6 +24021,15 @@
     "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/SCaHcmOZIDrRi7yGMehAhK6r6s6Y3grJDZgUFn8p.jpg"
   },
   {
+    "serial": 2670,
+    "reference": "SKO-2025-70178",
+    "name": "Sadam Umar",
+    "lga": "Sokoto North",
+    "educationLevel": "HND",
+    "course": "Higher National Diploma In Public Administration",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/VaxxhakUqnaZSvWGqNjYxCx89eaQSAeEPUtOrx4P.jpg"
+  },
+  {
     "serial": 2671,
     "reference": "SKO-2025-84073",
     "name": "Bello Muazu",
@@ -24077,12 +24085,12 @@
   },
   {
     "serial": 2677,
-    "reference": "SKO-2025-47053",
-    "name": "Mansur Bala Bello",
-    "lga": "Tambawal",
-    "educationLevel": "Degree",
-    "course": "B,A Edu Islamic Study",
-    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/xfiNN5VvujX3c6hhDriJQIOaumVvhSCUI7Tz3C18.jpg"
+    "reference": "SKO-20251003110633-0817653",
+    "name": "Umar Maryam Abdullahi",
+    "lga": "Sokoto South",
+    "educationLevel": "HND",
+    "course": "HIGHER NATIONAL DIPLOMA IN SCIENCE LABORATORY TECHNOLOGY ( MICROBIOLOGY )",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/4euOeaLL26lclB6sh6oHOTD0X8cYDpNc2lmwdklu.jpg"
   },
   {
     "serial": 2678,
@@ -24527,12 +24535,12 @@
   },
   {
     "serial": 2727,
-    "reference": "SKO-2025-03617",
-    "name": "Aliyu Yakubu Ubandoma",
-    "lga": "Dange-Shuni",
+    "reference": "SKO-2025-38689",
+    "name": "Bashir Muhammad Tukur",
+    "lga": "Wamakko",
     "educationLevel": "HND",
-    "course": "Public Administration",
-    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/p8eBkYkthi8bMTBSzsZgwTQzMTTLEsvSI0kTMGTH.png"
+    "course": "Business Administration and Management",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/OjRrOkWtg9aLjXhrZiyRlINDZeva7ulp1hvO5Cun.jpg"
   },
   {
     "serial": 2728,
@@ -24725,12 +24733,12 @@
   },
   {
     "serial": 2749,
-    "reference": "SKO-2025-67888",
-    "name": "Ummukulthum Muhammad Tukur",
+    "reference": "SKO-2025-28050",
+    "name": "Asmau Attahiru Dangaladima",
     "lga": "Sokoto North",
     "educationLevel": "Degree",
-    "course": "B Sc Biology",
-    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/MxKyAtJI58WeZOfypNrW794AUwfuYQVKUXVtPlku.jpg"
+    "course": "B.A Education (Islamic Studies)",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/5BEIOyIMQzO2Iu67ajqTT8eeMPDmFJQmgD8SbcMS.jpg"
   },
   {
     "serial": 2750,
@@ -25182,16 +25190,15 @@
     "course": "Intergreated Science Double Major",
     "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/PnBwPnvLnabz6vrWVzJzCllnOMgSzj5MWayScvL6.jpg"
   },
- {
-  "serial": 2800,
-  "reference": "SKO-20251005072410-0016527",
-  "name": "Aisha Aliyu Tambuwal",
-  "lga": "Tambawal",
-  "educationLevel": "Degree",
-  "course": "B Sc Political Science",
-  "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/6PHhcB4Gav1GlY6hDibo63B5IW6FypE1gftj87sm.jpg"
-}
-  ,
+  {
+    "serial": 2800,
+    "reference": "SKO-20251005072410-0016527",
+    "name": "Aisha Aliyu Tambuwal",
+    "lga": "Tambawal",
+    "educationLevel": "Degree",
+    "course": "B Sc Political Science",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/6PHhcB4Gav1GlY6hDibo63B5IW6FypE1gftj87sm.jpg"
+  },
   {
     "serial": 2801,
     "reference": "SKO-2025-39581",
@@ -25311,12 +25318,12 @@
   },
   {
     "serial": 2814,
-    "reference": "SKO-2025-72647",
-    "name": "Jafaru Muhammad",
-    "lga": "Sokoto South",
-    "educationLevel": "Degree",
-    "course": "B Sc Public Administration",
-    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/Q5ZeBwRdY9pUr5u1CFBPBR9rHxFkMa1XPw0kcEKJ.jpg"
+    "reference": "SKO-2025-85391",
+    "name": "Muzambilu Hussaini",
+    "lga": "Sokoto North",
+    "educationLevel": "NCE",
+    "course": "Social Studies \ud835\ude3f\ud835\ude64\ud835\ude6a\ud835\ude57\ud835\ude61\ud835\ude5a  \ud835\ude62\ud835\ude56\ud835\ude5f\ud835\ude64\ud835\ude67",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/kp5w6UyhqymOJdsUaQlIh7SvK42rk3lksdKco2L9.jpg"
   },
   {
     "serial": 2815,
@@ -25455,12 +25462,12 @@
   },
   {
     "serial": 2830,
-    "reference": "SKO-20250930191916-0225497",
-    "name": "Ibrahim Anas Muhammad",
+    "reference": "SKO-2025-72344",
+    "name": "Maryam Ibrahim Bashar",
     "lga": "Sokoto South",
-    "educationLevel": "Degree",
-    "course": "B Sc Computer Science",
-    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/WKIOu7nSflQ3ltNfnlAo78Lk1vORSSMcPIAmDvEx.jpg"
+    "educationLevel": "NCE",
+    "course": "Early Child Care And Education",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/S2No5NtpesWwgfiUHoqJIBcgOgoIr9DNE44mAtSO.jpg"
   },
   {
     "serial": 2831,
@@ -25662,12 +25669,12 @@
   },
   {
     "serial": 2853,
-    "reference": "SKO-2025-14675",
-    "name": "Sufiyanu Usman",
-    "lga": "Sokoto South",
+    "reference": "SKO-2025-60686",
+    "name": "Yahaya Umar Gado",
+    "lga": "Sokoto North",
     "educationLevel": "Degree",
-    "course": "Bsc Biology",
-    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/b4zS09myk56ppeoySnujvS8lQjQXOnzISHGZr7Ld.jpg"
+    "course": "Bsc Geography",
+    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/pTWm8Y7xexiBeXtOTbvf09hu65fdgaEWZQZs8SeF.jpg"
   },
   {
     "serial": 2854,
@@ -25752,12 +25759,12 @@
   },
   {
     "serial": 2863,
-    "reference": "SKO-2025-67148",
-    "name": "Bashar Malam Mode",
-    "lga": "Bodinga",
-    "educationLevel": "NCE",
-    "course": "Islamic Studies/economics",
-    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/xO2DI0CRI3BEdHDmuCGQ0jUxqXGXFZIMPU2LtG3h.jpg"
+    "reference": "SKO-2025-00039",
+    "name": "Ismaila Ismaila Wali",
+    "lga": "09036222105",
+    "educationLevel": "Degree",
+    "course": "Chemistry",
+    "photoUrl": "https://sokotostate.gov.ng/image-uploader/uploads/img_69e7357777c8e5.42668439.jpeg"
   },
   {
     "serial": 2864,
@@ -25833,12 +25840,12 @@
   },
   {
     "serial": 2872,
-    "reference": "SKO-2025-67382",
-    "name": "Hauwa'U Abdullahi",
-    "lga": "Silame",
-    "educationLevel": "HND",
-    "course": "B Ed Primary Education",
-    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/LAkWv0a83ljiHbAkprY8VtwiocNuCUZqxNrrOKGg.jpg"
+    "reference": "SKO-2025-00038",
+    "name": "Balkisu Shehu Adili",
+    "lga": "07066667696",
+    "educationLevel": "NCE",
+    "course": "Primary Education",
+    "photoUrl": "https://sokotostate.gov.ng/image-uploader/uploads/img_69e734502a5232.37310624.jpeg"
   },
   {
     "serial": 2873,
@@ -25959,12 +25966,12 @@
   },
   {
     "serial": 2886,
-    "reference": "SKO-2025-29731",
-    "name": "Armiya'u Ibrahim",
-    "lga": "Gwadabaw",
-    "educationLevel": "Degree",
-    "course": "B Sc Statistics",
-    "photoUrl": "https://employment-portal-uploads.s3.eu-west-1.amazonaws.com/photos/profiles/eNCdBhu0EbPjYTKXnRk1mLl0c2j9tMel71EnDAs7.jpg"
+    "reference": "SKO-2025-00040",
+    "name": "Ummul khairi Ibrahim basit",
+    "lga": "08167704700",
+    "educationLevel": "NCE certificate",
+    "course": "Sos D/Major",
+    "photoUrl": "NaN"
   },
   {
     "serial": 2887,
@@ -26167,7 +26174,7 @@
   {
     "serial": 2909,
     "reference": "SKO-2025-88830",
-    "name": " ⁠Naziru Alhaji lawal",
+    "name": " \u2060Naziru Alhaji lawal",
     "lga": "Sokoto South",
     "educationLevel": "Degree ",
     "course": "B.ed Guidance And Counseling",
