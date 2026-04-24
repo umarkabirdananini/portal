@@ -10235,11 +10235,11 @@
   {
     "serial": 1138,
     "reference": "HAJARA",
-    "name": NaN,
-    "lga": NaN,
-    "educationLevel": NaN,
-    "course": NaN,
-    "photoUrl": NaN
+    "name": "NaN",
+    "lga": "NaN",
+    "educationLevel": "NaN",
+    "course": "NaN",
+    "photoUrl": "NaN"
   },
   {
     "serial": 1139,
@@ -22992,7 +22992,7 @@
     "lga": "Sokoto\u00a0South",
     "educationLevel": "Degree",
     "course": "BA Hausa",
-    "photoUrl": NaN
+    "photoUrl": "NaN"
   },
   {
     "serial": 2556,
@@ -25791,7 +25791,7 @@
     "lga": "Sokoto\u00a0South",
     "educationLevel": "NCE",
     "course": "Hausa Social Studies",
-    "photoUrl": NaN
+    "photoUrl": "NaN"
   },
   {
     "serial": 2867,
